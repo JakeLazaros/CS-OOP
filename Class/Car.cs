@@ -10,21 +10,33 @@ namespace OOP.Class
     {
         public string Make { get; private set; }
         public string Model { get; private set; }
+        public bool IsDriving { get; private set; }
+
+        private Dictionary<string, int> startChances = new Dictionary<string, int>
+        {
+            { "BMW", 10 }, // Talking from experience here.
+            { "Honda", 2 }
+        };
+
+        private Random rand = new Random();
 
         public Car(string make, string model)
         {
             Make = make;
             Model = model;
+            IsDriving = false;
         }
 
-        public string getMake()
+        public bool StartDrive()
         {
-            return Make;
+            int startChance = rand.Next(startChances[Make]);
+
+            return (startChance == 1 ? true : false);
         }
 
-        public string getModel()
+        public bool StopDrive()
         {
-            return Model;
+            return IsDriving = false;
         }
     }
 }
