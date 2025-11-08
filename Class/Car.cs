@@ -15,7 +15,8 @@ namespace OOP.Class
         private Dictionary<string, int> startChances = new Dictionary<string, int>
         {
             { "BMW", 10 }, // Talking from experience here.
-            { "Honda", 2 }
+            { "Volvo", 2 },
+            { "Honda", 1 }
         };
 
         private Random rand = new Random();
@@ -31,7 +32,7 @@ namespace OOP.Class
         {
             int startChance = rand.Next(startChances[Make]);
 
-            return (startChance == 1 ? true : false);
+            return (startChance == 0 ? true : false);
         }
 
         public bool StopDrive()

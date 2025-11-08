@@ -5,6 +5,7 @@ Console.Title = "Realistic Car Simulator";
 var cars = new List<(string Brand, string Model)>
 {
     ("BMW", "3 Series"),
+    ("Volvo", "XC40"),
     ("Honda", "Civic")
 };
 
