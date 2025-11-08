@@ -14,9 +14,9 @@ namespace OOP.Class
 
         private Dictionary<string, int> startChances = new Dictionary<string, int>
         {
-            { "BMW", 10 }, // Talking from experience here.
-            { "Volvo", 2 },
-            { "Honda", 1 }
+            { "BMW", 10 }, // Talking from experience here, very realistic. 10% chance.
+            { "Volvo", 2 }, // 50% chance (not realistic).
+            { "Honda", 1 } // 100% chance.
         };
 
         private Random rand = new Random();
